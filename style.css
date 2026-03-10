@@ -267,3 +267,224 @@ footer{
     font-size: 14px;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
+
+/* ===== AUTH PAGE SPECIFIC ===== */
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    min-height: calc(100vh - 160px);
+}
+
+.auth-hero-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-hero-logo h1 {
+    font-size: 3rem;
+    color: var(--text-white);
+    text-shadow: 0 0 20px rgba(112, 220, 249, 0.4);
+    letter-spacing: 5px;
+}
+
+.auth-hero-logo p {
+    color: var(--bcn-skyblue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* La Tarjeta */
+.auth-card {
+    background: var(--card-blue);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Pestañas */
+.auth-tabs {
+    display: flex;
+    background: rgba(0,0,0,0.2);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-gray);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+    color: var(--bcn-skyblue);
+    border-bottom: 3px solid var(--bcn-skyblue);
+    background: rgba(112, 220, 249, 0.05);
+}
+
+/* Formulario */
+.auth-body {
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.2);
+    color: white;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--bcn-skyblue);
+}
+
+/* Checkbox Estilizado */
+.form-options {
+    margin-bottom: 30px;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-gray);
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 4px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--bcn-skyblue);
+}
+
+/* Botón Principal */
+.btn-main-auth {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--bcn-red);
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-main-auth:hover {
+    background: var(--bcn-fuchsia);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(224, 35, 101, 0.4);
+}
+
+/* Separador */
+.separator {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.separator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+.separator span {
+    background: var(--card-blue);
+    padding: 0 15px;
+    position: relative;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* Botones Sociales */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-social {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-social:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--text-white);
+}
+
+.btn-back {
+    border: 1px solid var(--bcn-red);
+    padding: 5px 15px !important;
+    border-radius: 5px;
+    color: var(--bcn-red) !important;
+}
+
+.btn-back:hover {
+    background: var(--bcn-red);
+    color: white !important;
+}
