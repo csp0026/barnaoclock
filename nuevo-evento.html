@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Evento | BARNA O’CLOCK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+
+<header>
+    <nav>
+        <div class="logo">BARNA O’CLOCK 🕒</div>
+        <ul>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="nuevo-evento.html" class="active-link">Publicar Plan</a></li>
+            <li><a href="perfil.html" class="btn-profile">[ Mi Perfil ]</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="form-page-container">
+    
+    <div class="form-header">
+        <h2>CREAR NUEVO EVENTO 🔥</h2>
+    </div>
+
+    <section class="post-event-card">
+        <form action="#">
+            
+            <div class="form-group">
+                <label>NOMBRE DEL EVENTO:</label>
+                <input type="text" placeholder="Ej: Perreo al Sol / Techno Bunker" required>
+            </div>
+
+            <div class="form-group">
+                <label>CATEGORÍA PRINCIPAL:</label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="category" value="elektro">
+                        <span class="radio-dot"></span> Elektro
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="category" value="reggaeton">
+                        <span class="radio-dot"></span> Reggaeton
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="category" value="urban">
+                        <span class="radio-dot"></span> Urban/Trap
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="category" value="otros">
+                        <span class="radio-dot"></span> Otros
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>SALA / UBICACIÓN:</label>
+                <input type="text" placeholder="Ej: Razzmatazz / Shôko" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>FECHA:</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>HORA:</label>
+                    <input type="time" value="23:30" required>
+                </div>
+            </div>
+
+            <div class="form-row align-center">
+                <div class="form-group">
+                    <label>PRECIO ENTRADA:</label>
+                    <input type="text" placeholder="Ej: 15€">
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        ¿Hay lista gratis?
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>FLYER / IMAGEN (Arrastra o haz click):</label>
+                <div class="upload-area">
+                    <input type="file" id="flyer-input" hidden>
+                    <label for="flyer-input" class="upload-label">
+                        <span class="upload-icon">+</span>
+                        <span class="upload-text">SUBIR</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>DESCRIPCIÓN CORTA (Vende la moto aquí):</label>
+                <textarea rows="4" placeholder="Escribe aquí los detalles del evento, DJs, condiciones..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit-event">
+                    🕒 PUBLICAR EVENTO AHORA
+                </button>
+            </div>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 BARNA O’CLOCK - Made in Barcelona</p>
+</footer>
+
+</body>
+</html>
