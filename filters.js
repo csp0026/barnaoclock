@@ -6,23 +6,24 @@ function filterEvents() {
     const day = dayFilter.value;
     const genre = genreFilter.value;
     const price = priceFilter.value;
-
     const cards = document.querySelectorAll(".card");
 
     cards.forEach(card => {
-        const cardDay = card.dataset.day;
-        const cardGenre = card.dataset.genre;
-        const cardPrice = card.dataset.price;
-
-        const matchDay = day === "all" || day === "alldays" || day === cardDay;
-        const matchGenre = genre === "all" || genre === "allgenre" || genre === cardGenre;
+        const matchDay = day === "all" || day === "alldays" || day === card.dataset.day;
+        const matchGenre = genre === "all" || genre === "allgenre" || genre === card.dataset.genre;
         const matchPrice =
             price === "all" || price === "allprices" ||
-            (price === "free" && cardPrice === "free") ||
-            (price === "paid15" && (cardPrice === "free" || cardPrice === "paid15")) ||
-            (price === "paid30" && (cardPrice === "free" || cardPrice === "paid15" || cardPrice === "paid30"));
+            (price === "free" && card.dataset.price === "free") ||
+            (price === "paid15" && ["free", "paid15"].includes(card.dataset.price)) ||
+            (price === "paid30" && ["free", "paid15", "paid30"].includes(card.dataset.price));
 
-        card.style.display = (matchDay && matchGenre && matchPrice) ? "" : "none";
+        if (matchDay && matchGenre && matchPrice) {
+            card.style.display = "";
+            setTimeout(() => card.style.opacity = "1", 10);
+        } else {
+            card.style.opacity = "0";
+            setTimeout(() => card.style.display = "none", 300);
+        }
     });
 }
 
