@@ -1,26 +1,23 @@
 /* ===== RESET & VARIABLES ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root{
-    /* Colores Corporativos */
-    --bcn-blue: #141941;      /* Azul profundo */
-    --bcn-red: #BE013C;       /* Rojo vibrante */
-    --bcn-skyblue: #70DCF9;   /* Skyblue */
-    --bcn-fuchsia: #E02365;   /* Fucsia opcional */
-    
-    /* Colores de apoyo */
-    --bg-dark: #0a0d25;       /* Fondo aún más oscuro para contraste */
-    --card-blue: #1c2255;     /* Azul para tarjetas */
+:root {
+    --bcn-blue: #141941;
+    --bcn-red: #BE013C;
+    --bcn-skyblue: #70DCF9;
+    --bcn-fuchsia: #E02365;
+    --bg-dark: #0a0d25;
+    --card-blue: #1c2255;
     --text-white: #ffffff;
     --text-gray: #a5a9c5;
 }
 
 /* ===== BODY ===== */
-body{
+body {
     background: radial-gradient(circle at top, var(--bcn-blue) 0%, var(--bg-dark) 80%);
     color: var(--text-white);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -29,7 +26,7 @@ body{
 }
 
 /* ===== NAVBAR ===== */
-header{
+header {
     backdrop-filter: blur(15px);
     background: rgba(20, 25, 65, 0.8);
     position: sticky;
@@ -38,14 +35,14 @@ header{
     border-bottom: 1px solid rgba(112, 220, 249, 0.1);
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
 }
 
-.logo{
+.logo {
     font-weight: 900;
     letter-spacing: 1px;
     font-size: 22px;
@@ -53,14 +50,14 @@ nav{
     text-shadow: 2px 2px 0px var(--bcn-red);
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
     align-items: center;
 }
 
-nav a{
+nav a {
     color: var(--text-white);
     text-decoration: none;
     font-size: 15px;
@@ -68,11 +65,11 @@ nav a{
     transition: 0.3s ease;
 }
 
-nav a:hover{
+nav a:hover {
     color: var(--bcn-skyblue);
 }
 
-#lang-toggle{
+#lang-toggle {
     border: 1px solid var(--bcn-skyblue);
     color: var(--bcn-skyblue);
     padding: 5px 10px;
@@ -81,7 +78,7 @@ nav a:hover{
 }
 
 /* ===== LOGIN BUTTON ===== */
-.btn-login{
+.btn-login {
     background: var(--bcn-skyblue);
     color: var(--bcn-blue) !important;
     padding: 10px 22px;
@@ -90,19 +87,19 @@ nav a:hover{
     opacity: 1 !important;
 }
 
-.btn-login:hover{
+.btn-login:hover {
     background: var(--text-white);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(112, 220, 249, 0.3);
 }
 
 /* ===== HERO SECTION ===== */
-.hero{
+.hero {
     text-align: center;
     padding: 120px 20px 60px;
 }
 
-.hero h1{
+.hero h1 {
     font-size: clamp(40px, 8vw, 72px);
     font-weight: 900;
     margin-bottom: 20px;
@@ -112,31 +109,31 @@ nav a:hover{
     letter-spacing: -1px;
 }
 
-.hero p{
+.hero p {
     color: var(--text-gray);
     margin-bottom: 40px;
     font-size: 20px;
 }
 
-.hero input{
+.hero input {
     padding: 16px 25px;
     width: 100%;
     max-width: 400px;
     border-radius: 50px 0 0 50px;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     outline: none;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
     font-size: 16px;
     transition: 0.3s;
 }
 
-.hero input:focus{
+.hero input:focus {
     border-color: var(--bcn-skyblue);
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.hero button{
+.hero button {
     padding: 16px 30px;
     margin-left: -5px;
     border: none;
@@ -149,13 +146,13 @@ nav a:hover{
     text-transform: uppercase;
 }
 
-.hero button:hover{
+.hero button:hover {
     background: var(--bcn-fuchsia);
     box-shadow: 0 0 20px rgba(190, 1, 60, 0.4);
 }
 
 /* ===== VIBES ===== */
-.vibes h2{
+.vibes h2 {
     text-align: center;
     font-size: 14px;
     color: var(--bcn-skyblue);
@@ -164,13 +161,13 @@ nav a:hover{
     margin-bottom: 25px;
 }
 
-.vibe-tags{
+.vibe-tags {
     display: flex;
     justify-content: center;
     gap: 12px;
 }
 
-.vibe-tags span{
+.vibe-tags span {
     background: var(--card-blue);
     border: 1px solid rgba(112, 220, 249, 0.2);
     padding: 8px 20px;
@@ -181,42 +178,44 @@ nav a:hover{
     transition: 0.3s;
 }
 
-.vibe-tags span:hover{
+.vibe-tags span:hover {
     border-color: var(--bcn-red);
     color: var(--bcn-red);
     background: white;
 }
 
 /* ===== EVENTOS GRID ===== */
-.eventos-destacados{
+.eventos-destacados {
     padding: 80px 8%;
 }
 
-.eventos-destacados h2{
+.eventos-destacados h2 {
     font-size: 28px;
     margin-bottom: 40px;
     border-left: 5px solid var(--bcn-red);
     padding-left: 15px;
 }
 
-.grid-eventos{
+.grid-eventos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 35px;
 }
 
 /* ===== CARDS ===== */
-.card{
+.card {
     background: var(--card-blue);
     border-radius: 20px;
     overflow: hidden;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255,255,255,0.05);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(30px);
+
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     border-color: var(--bcn-skyblue);
 }
 
@@ -224,23 +223,23 @@ nav a:hover{
     width: 100%;
     height: 240px;
     object-fit: cover;
-    background-color: var(--bcn-blue); /* Fondo de respaldo */
+    background-color: var(--bcn-blue);
     display: block;
 }
 
-.card h3{
+.card h3 {
     padding: 20px 20px 5px;
     font-size: 20px;
     color: var(--text-white);
 }
 
-.card p{
+.card p {
     padding: 0 20px 20px;
     color: var(--text-gray);
     font-size: 14px;
 }
 
-.card a{
+.card a {
     display: block;
     margin: 0 20px 20px;
     padding: 12px;
@@ -253,19 +252,24 @@ nav a:hover{
     transition: 0.3s;
 }
 
-.card a:hover{
+.card a:hover {
     background: white;
     color: var(--bcn-red);
 }
 
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ===== FOOTER ===== */
-footer{
+footer {
     text-align: center;
     padding: 60px;
     background: #080a1d;
     color: var(--text-gray);
     font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ===== AUTH PAGE SPECIFIC ===== */
@@ -305,14 +309,14 @@ footer{
     max-width: 450px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Pestañas */
 .auth-tabs {
     display: flex;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .tab-btn {
@@ -354,8 +358,8 @@ footer{
     width: 100%;
     padding: 14px;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     color: white;
     outline: none;
 }
@@ -391,15 +395,15 @@ footer{
     left: 0;
     height: 18px;
     width: 18px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
 
-.checkbox-container:hover input ~ .checkmark {
-    background-color: rgba(255,255,255,0.2);
+.checkbox-container:hover input~.checkmark {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-container input:checked~.checkmark {
     background-color: var(--bcn-skyblue);
 }
 
@@ -438,7 +442,7 @@ footer{
     left: 0;
     width: 100%;
     height: 1px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .separator span {
@@ -459,9 +463,9 @@ footer{
 .btn-social {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -473,7 +477,7 @@ footer{
 }
 
 .btn-social:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--text-white);
 }
 
@@ -511,7 +515,7 @@ footer{
     padding: 40px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
@@ -544,7 +548,7 @@ footer{
     transition: 0.3s;
 }
 
-.post-event-card input:focus, 
+.post-event-card input:focus,
 .post-event-card textarea:focus {
     border-color: var(--bcn-skyblue);
     box-shadow: 0 0 10px rgba(112, 220, 249, 0.2);
@@ -591,7 +595,7 @@ footer{
     position: relative;
 }
 
-.radio-item input:checked + .radio-dot::after {
+.radio-item input:checked+.radio-dot::after {
     content: "";
     position: absolute;
     top: 3px;
@@ -633,7 +637,7 @@ footer{
 .upload-text {
     font-weight: 800;
     color: var(--text-white);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 8px 20px;
     border-radius: 5px;
 }
@@ -663,6 +667,50 @@ footer{
 .btn-profile {
     color: var(--bcn-skyblue) !important;
     font-weight: bold;
+}
+
+/* ===== FILTROS EXPLORAR ===== */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filters select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--card-blue);
+    color: var(--text-white);
+    border: 1px solid rgba(112, 220, 249, 0.3);
+    border-radius: 50px;
+    padding: 12px 45px 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+    letter-spacing: 1px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2370DCF9' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.filters select:hover {
+    border-color: var(--bcn-skyblue);
+    background-color: rgba(112, 220, 249, 0.08);
+    box-shadow: 0 0 12px rgba(112, 220, 249, 0.15);
+}
+
+.filters select:focus {
+    border-color: var(--bcn-skyblue);
+    box-shadow: 0 0 0 3px rgba(112, 220, 249, 0.15);
+}
+
+.filters select option {
+    background: var(--bcn-blue);
+    color: var(--text-white);
+    padding: 10px;
 }
 
 /* Responsive */

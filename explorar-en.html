@@ -1,134 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Explore Events | BARNA O'CLOCK</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Events | BARNA O'CLOCK</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<nav>
-<div class="logo">BARNA O'CLOCK 🕒</div>
-<ul>
-    <li><a href="index-en.html">Home</a></li>
-    <li><a href="explorar.html">Explore</a></li>
-    <li><a href="nuevo-evento-en.html">Post Event</a></li>
-    <li><a href="auth-en.html" class="btn-login">Login / Sign up</a></li>
-</ul>
-</nav>
-</header>
+    <header>
+        <nav>
+            <div class="logo">BARNA O'CLOCK 🕒</div>
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="explorar-en.html">Explore</a></li>
+                <li><a href="nuevo-evento-en.html">Post Event</a></li>
+                <li><a href="auth-en.html" class="btn-login">Login / Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-<section class="eventos-destacados">
+    <main>
+        <section class="eventos-destacados">
 
-<h2>EXPLORE EVENTS</h2>
+            <h2>EXPLORE EVENTS</h2>
 
-<!-- FILTROS -->
-<div class="filters">
+            <!-- FILTROS -->
+            <div class="filters">
 
-    <select id="filter-day">
-        <option value="all">Day</option>
-        <option value="friday-march">Friday 27 March</option>
-        <option value="saturday-march">Saturday 28 March</option>
-        <option value="sunday-march">Sunday 29 March</option>
-        <option value="friday-april">Friday 3 April</option>
-        <option value="saturday-april">Saturday 4 April</option>
-        <option value="sunday-april">Sunday 5 April</option>
-        <option value="alldays">Show all</option>
-    </select>
+                <select id="filter-day">
+                    <option value="all">Day</option>
+                    <option value="friday-march">Friday 27 March</option>
+                    <option value="saturday-march">Saturday 28 March</option>
+                    <option value="sunday-march">Sunday 29 March</option>
+                    <option value="friday-april">Friday 3 April</option>
+                    <option value="saturday-april">Saturday 4 April</option>
+                    <option value="sunday-april">Sunday 5 April</option>
+                    <option value="alldays">Show all</option>
+                </select>
 
-    <select id="filter-genre">
-        <option value="all">Genre</option>
-        <option value="electronic">Electronic</option>
-        <option value="reggaeton">Reggaeton</option>
-        <option value="afro">Afro</option>
-        <option value="chill">Chill</option>
-        <option value="allgenre">Show all</option>
-    </select>
+                <select id="filter-genre">
+                    <option value="all">Genre</option>
+                    <option value="electronic">Electronic</option>
+                    <option value="reggaeton">Reggaeton</option>
+                    <option value="afro">Afro</option>
+                    <option value="chill">Chill</option>
+                    <option value="allgenre">Show all</option>
+                </select>
 
-    <select id="filter-price">
-        <option value="all">Price</option>
-        <option value="free">Free</option>
-        <option value="paid15">15€ or less</option>
-        <option value="paid30">30€ or less</option>
-        <option value="allprices">Show all</option>
-    </select>
+                <select id="filter-price">
+                    <option value="all">Price</option>
+                    <option value="free">Free</option>
+                    <option value="paid15">15€ or less</option>
+                    <option value="paid30">30€ or less</option>
+                    <option value="allprices">Show all</option>
+                </select>
 
-</div>
+            </div>
 
-<div class="grid-eventos" id="events">
+            <div class="grid-eventos" id="events">
 
-    <div class="card" data-day="sunday-march" data-genre="electronic" data-price="paid30">
-<img src="https://ege.electronicgroove.com/wp-content/uploads/2025/07/BRUNCH-FESTIVAL-Official-1000x667-1.jpg?q=80&w=800&auto=format&fit=crop">
-<h3>BRUNCH ELECTRONIK</h3>
-<p>📍 Poble Espanyol</p>
-<a href="evento.html">Get Tickets</a>
-</div>
+                <div class="card" data-day="sunday-march" data-genre="electronic" data-price="paid30">
+                    <img
+                        src="https://ege.electronicgroove.com/wp-content/uploads/2025/07/BRUNCH-FESTIVAL-Official-1000x667-1.jpg?q=80&w=800&auto=format&fit=crop">
+                    <h3>BRUNCH ELECTRONIK</h3>
+                    <p>📍 Poble Espanyol</p>
+                    <a href="evento.html">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="saturday-march" data-genre="reggaeton" data-price="paid30">
-<img src="https://images.myguide-cdn.com/ibiza/companies/the-best-reggaeton-party-in-ibiza/large/the-best-reggaeton-party-in-ibiza-3698609.jpg?q=80&w=800&auto=format&fit=crop">
-<h3>REGGAETON PARTY</h3>
-<p>📍 Opium Barcelona</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="saturday-march" data-genre="reggaeton" data-price="paid30">
+                    <img
+                        src="https://images.myguide-cdn.com/ibiza/companies/the-best-reggaeton-party-in-ibiza/large/the-best-reggaeton-party-in-ibiza-3698609.jpg?q=80&w=800&auto=format&fit=crop">
+                    <h3>REGGAETON PARTY</h3>
+                    <p>📍 Opium Barcelona</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="friday-march" data-genre="electronic" data-price="paid15">
-<img src="https://wololosound.com/wp-content/uploads/animals-industry.jpg?q=80&w=800&auto=format&fit=crop">
-<h3>TECHNO UNDERGROUND</h3>
-<p>📍 Razzmatazz</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="friday-march" data-genre="electronic" data-price="paid15">
+                    <img
+                        src="https://wololosound.com/wp-content/uploads/animals-industry.jpg?q=80&w=800&auto=format&fit=crop">
+                    <h3>TECHNO UNDERGROUND</h3>
+                    <p>📍 Razzmatazz</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="saturday-march" data-genre="afro" data-price="paid15">
-<img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/afrobeat-party-facebook-event-cover-template-design-cb56b860363b6b14350ea0bd824577ab_screen.jpg?ts=1716645674&q=80&w=800&auto=format&fit=crop">
-<h3>AFROBEATS NIGHT</h3>
-<p>📍 Shôko Club</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="saturday-march" data-genre="afro" data-price="paid15">
+                    <img
+                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/afrobeat-party-facebook-event-cover-template-design-cb56b860363b6b14350ea0bd824577ab_screen.jpg?ts=1716645674&q=80&w=800&auto=format&fit=crop">
+                    <h3>AFROBEATS NIGHT</h3>
+                    <p>📍 Shôko Club</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="friday-april" data-genre="reggaeton" data-price="paid30">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5OICuQEMyode-FNRcwqVIDa-C47P2sud2g&s&q=80&w=800&auto=format&fit=crop">
-<h3>LATIN VIBES</h3>
-<p>📍 Sutton Club</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="friday-april" data-genre="reggaeton" data-price="paid30">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5OICuQEMyode-FNRcwqVIDa-C47P2sud2g&s&q=80&w=800&auto=format&fit=crop">
+                    <h3>LATIN VIBES</h3>
+                    <p>📍 Sutton Club</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="saturday-april" data-genre="electronic" data-price="paid15">
-<img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop">
-<h3>HOUSE ALL NIGHT</h3>
-<p>📍 Input High Fidelity</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="saturday-april" data-genre="electronic" data-price="paid15">
+                    <img
+                        src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop">
+                    <h3>HOUSE ALL NIGHT</h3>
+                    <p>📍 Input High Fidelity</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="sunday-march" data-genre="chill" data-price="free">
-<img src="https://foodlovertour.com/wp-content/uploads/sites/7327/2015/10/Gracia-Festival-2015.jpg?w=700&h=700&zoom=2&q=80&w=800&auto=format&fit=crop">
-<h3>GRÀCIA STREET FESTIVAL</h3>
-<p>📍 Gràcia District • Live music</p>
-<a href="#">View Plan</a>
-</div>
+                <div class="card" data-day="sunday-march" data-genre="chill" data-price="free">
+                    <img
+                        src="https://foodlovertour.com/wp-content/uploads/sites/7327/2015/10/Gracia-Festival-2015.jpg?w=700&h=700&zoom=2&q=80&w=800&auto=format&fit=crop">
+                    <h3>GRÀCIA STREET FESTIVAL</h3>
+                    <p>📍 Gràcia District • Live music</p>
+                    <a href="#">View Plan</a>
+                </div>
 
-<div class="card" data-day="friday-april" data-genre="chill" data-price="paid15">
-<img src="https://static.wixstatic.com/media/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg/v1/fill/w_1480,h_832,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg?q=80&w=800&auto=format&fit=crop">
-<h3>INDIE CONCERT AT APOLO</h3>
-<p>📍 Sala Apolo • Live music</p>
-<a href="#">Get Tickets</a>
-</div>
+                <div class="card" data-day="friday-april" data-genre="chill" data-price="paid15">
+                    <img
+                        src="https://static.wixstatic.com/media/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg/v1/fill/w_1480,h_832,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg?q=80&w=800&auto=format&fit=crop">
+                    <h3>INDIE CONCERT AT APOLO</h3>
+                    <p>📍 Sala Apolo • Live music</p>
+                    <a href="#">Get Tickets</a>
+                </div>
 
-<div class="card" data-day="sunday-april" data-genre="chill" data-price="free">
-<img src="https://marulacafe.com/wp-content/uploads/2024/11/mejores-jam-session-en-Barcelona-ok-1-1.jpg?q=80&w=800&auto=format&fit=crop">
-<h3>JAM SESSION & VERMOUTH</h3>
-<p>📍 Ciutadella Park • Sunset</p>
-<a href="#">View Plan</a>
-</div>
+                <div class="card" data-day="sunday-april" data-genre="chill" data-price="free">
+                    <img
+                        src="https://marulacafe.com/wp-content/uploads/2024/11/mejores-jam-session-en-Barcelona-ok-1-1.jpg?q=80&w=800&auto=format&fit=crop">
+                    <h3>JAM SESSION & VERMOUTH</h3>
+                    <p>📍 Ciutadella Park • Sunset</p>
+                    <a href="#">View Plan</a>
+                </div>
 
-</div>
-</section>
-</main>
+            </div>
+        </section>
+    </main>
 
-<script defer src="filters.js"></script>
+    <script defer src="filters.js"></script>
 
 </body>
+
 </html>
