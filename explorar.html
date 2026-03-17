@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorar Eventos | BARNA O’CLOCK</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="logo">BARNA O'CLOCK 🕒</div>
+    <ul>
+            <li><a href="index.html" class="btn-back">Inicio</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="nuevo-evento.html">Publicar Plan</a></li>            
+            <li><a href="auth.html" class="btn-login">Entrar / Registrarse</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+
+<section class="eventos-destacados">
+
+<h2>EXPLORAR EVENTOS</h2>
+
+<!-- FILTROS -->
+
+<div class="filters">
+
+<select id="filter-day">
+<option value="all">Día</option>
+<option value="friday-march">Viernes 27 Marzo</option>
+<option value="saturday-march">Sábado 28 Marzo</option>
+<option value="sunday-march">Domingo 29 Marzo</option>
+<option value="friday-april">Viernes 3 Abril</option>
+<option value="saturday-april">Sábado 4 Abril</option>
+<option value="sunday-april">Domingo 5 Abril</option>
+<option value="alldays">Muestra todo </option>
+</select>
+
+<select id="filter-genre">
+<option value="all">Género</option>
+<option value="electronic">Electrónica</option>
+<option value="reggaeton">Reggaetón</option>
+<option value="afro">Afro</option>
+<option value="chill">Chill</option>
+<option value="allgenre">Muestra todo</option>
+</select>
+
+<select id="filter-price">
+<option value="all">Precio</option>
+<option value="free">Gratis</option>
+<option value="paid15">15€ o menos </option>
+<option value="paid30">30€ o menos </option>
+<option value="allprices">Muestra todo </option>
+</select>
+
+</div>
+
+<!-- EVENTOS -->
+
+<div class="grid-eventos" id="events">
+
+<div class="card" data-day="sunday-march" data-genre="electronic" data-price="paid30">
+<img src="https://ege.electronicgroove.com/wp-content/uploads/2025/07/BRUNCH-FESTIVAL-Official-1000x667-1.jpg?q=80&w=800&auto=format&fit=crop">
+<h3>BRUNCH ELECTRONIK</h3>
+<p>📍 Poble Espanyol</p>
+<a href="evento.html">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="saturday-march" data-genre="reggaeton" data-price="paid30">
+<img src="https://images.myguide-cdn.com/ibiza/companies/the-best-reggaeton-party-in-ibiza/large/the-best-reggaeton-party-in-ibiza-3698609.jpg?q=80&w=800&auto=format&fit=crop">
+<h3>REGGAETON PARTY</h3>
+<p>📍 Opium Barcelona</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="friday-march" data-genre="electronic" data-price="paid15">
+<img src="https://wololosound.com/wp-content/uploads/animals-industry.jpg?q=80&w=800&auto=format&fit=crop">
+<h3>TECHNO UNDERGROUND</h3>
+<p>📍 Razzmatazz</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="saturday-march" data-genre="afro" data-price="paid15">
+<img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/afrobeat-party-facebook-event-cover-template-design-cb56b860363b6b14350ea0bd824577ab_screen.jpg?ts=1716645674&q=80&w=800&auto=format&fit=crop">
+<h3>AFROBEATS NIGHT</h3>
+<p>📍 Shôko Club</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="friday-april" data-genre="reggaeton" data-price="paid30">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl5OICuQEMyode-FNRcwqVIDa-C47P2sud2g&s&q=80&w=800&auto=format&fit=crop">
+<h3>LATIN VIBES</h3>
+<p>📍 Sutton Club</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="saturday-april" data-genre="electronic" data-price="paid15">
+<img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop">
+<h3>HOUSE ALL NIGHT</h3>
+<p>📍 Input High Fidelity</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="sunday-march" data-genre="chill" data-price="free">
+<img src="https://foodlovertour.com/wp-content/uploads/sites/7327/2015/10/Gracia-Festival-2015.jpg?w=700&h=700&zoom=2&q=80&w=800&auto=format&fit=crop">
+<h3>FESTA MAJOR DE GRÀCIA</h3>
+<p>📍 Gràcia District • Live music</p>
+<a href="#">Ver Plan</a>
+</div>
+
+<div class="card" data-day="friday-april" data-genre="chill" data-price="paid15">
+<img src="https://static.wixstatic.com/media/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg/v1/fill/w_1480,h_832,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_ef9a2dc1bb7a442abc56cb2acd2b56d2~mv2.jpeg?q=80&w=800&auto=format&fit=crop">
+<h3>CONCIERTO INDIE EN APOLO</h3>
+<p>📍 Sala Apolo • Live music</p>
+<a href="#">Comprar Entrada</a>
+</div>
+
+<div class="card" data-day="sunday-april" data-genre="chill" data-price="free">
+<img src="https://marulacafe.com/wp-content/uploads/2024/11/mejores-jam-session-en-Barcelona-ok-1-1.jpg?q=80&w=800&auto=format&fit=crop">
+<h3>JAM SESSION & VERMOUT</h3>
+<p>📍 Parc de la Ciutadella • Música chill al atardecer</p>
+<a href="#">Ver Plan</a>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<script defer src="filters.js"></script>
+
+</body>
+</html>
