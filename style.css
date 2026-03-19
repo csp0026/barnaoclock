@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 /* ===== RESET & VARIABLES ===== */
 * {
     margin: 0;
@@ -20,7 +22,7 @@
 body {
     background: radial-gradient(circle at top, var(--bcn-blue) 0%, var(--bg-dark) 80%);
     color: var(--text-white);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -40,6 +42,44 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 8%;
+}
+
+.logo-navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logo-text {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--text-white);
+    text-shadow: 2px 2px 0px var(--bcn-red);
+    letter-spacing: 0.5px;
+}
+
+.logo-card-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 20px;
+    padding: 8px 12px;
+    border: 2px solid var(--bcn-skyblue);
+    transition: 0.3s ease;
+}
+
+.logo-card-navbar img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-navbar:hover .logo-card-navbar {
+    background: var(--bcn-skyblue);
+    box-shadow: 0 5px 20px rgba(112, 220, 249, 0.3);
 }
 
 .logo {
@@ -96,7 +136,29 @@ nav a:hover {
 /* ===== HERO SECTION ===== */
 .hero {
     text-align: center;
-    padding: 120px 20px 60px;
+    padding: 40px 20px 60px;
+}
+
+.logo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background: transparent;
+    border-radius: 30px;
+    padding: 40px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--bcn-skyblue);
+    box-shadow: 0 10px 40px rgba(112, 220, 249, 0.2);
+}
+
+.logo-card img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .hero h1 {
@@ -208,7 +270,7 @@ nav a:hover {
     border-radius: 20px;
     overflow: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--bcn-skyblue);
     transform: translateY(30px);
 
 }
