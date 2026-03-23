@@ -20,12 +20,27 @@
                 <span class="logo-text">BARNA O'CLOCK</span>
             </a>
 
-            <ul>
-                <li><a href="index-en.html" class="btn-back">Home</a></li>
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
                 <li><a href="explorar-en.html">Explore</a></li>
                 <li><a href="nuevo-evento-en.html">Post event</a></li>
-                <li><a href="auth-en.html" class="btn-login">Login / Sign up</a></li>
+                <li><a href="auth-en.html" class="btn-login"><span class="login-text">Login / Sign up</span><span class="login-icon">👤</span></a></li>
                 <li><a href="index.html" id="lang-toggle">ES</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile Navigation Dropdown -->
+            <ul class="nav-menu-mobile" id="nav-menu-mobile">
+                <li><a href="explorar-en.html">Explore</a></li>
+                <li><a href="nuevo-evento-en.html">Post event</a></li>
+                <li><a href="auth-en.html" class="btn-login-mobile">Login / Sign up</a></li>
+                <li><a href="index.html" class="lang-toggle-mobile">ES</a></li>
             </ul>
 
         </nav>
@@ -40,9 +55,10 @@
             </div>
             <p>Where's the party tonight? Find your next plan.</p>
 
-            <input type="text" placeholder="Search club, DJ, event or neighbourhood...">
-
-            <button>LET'S GO</button>
+            <div class="hero-search">
+                <input type="text" placeholder="Search club, DJ, event or neighbourhood...">
+                <button><span class="btn-text">LET'S GO</span><span class="btn-icon">➜</span></button>
+            </div>
 
         </section>
 
@@ -99,7 +115,37 @@
     <footer>
         <p>&copy; 2026 BARNA O’CLOCK - Made in Barcelona</p>
     </footer>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenuMobile = document.getElementById('nav-menu-mobile');
 
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenuMobile.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = navMenuMobile.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenuMobile.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickOnMenu = navMenuMobile.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickOnMenu && !isClickOnHamburger && navMenuMobile.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenuMobile.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
