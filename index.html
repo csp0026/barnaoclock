@@ -19,15 +19,28 @@
                 <span class="logo-text">BARNA O'CLOCK</span>
             </a>
 
-            <ul>
-                <li><a href="index.html" class="btn-back">Inicio</a></li>
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
                 <li><a href="explorar.html">Explorar</a></li>
                 <li><a href="nuevo-evento.html">Publicar Plan</a></li>
-                <li><a href="auth.html" class="btn-login">Entrar / Registrarse</a></li>
-
+                <li><a href="auth.html" class="btn-login"><span class="login-text">Entrar / Registrarse</span><span class="login-icon">👤</span></a></li>
                 <li><a href="index-en.html" id="lang-toggle">EN</a></li>
             </ul>
 
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile Navigation Dropdown -->
+            <ul class="nav-menu-mobile" id="nav-menu-mobile">
+                <li><a href="explorar.html">Explorar</a></li>
+                <li><a href="nuevo-evento.html">Publicar Plan</a></li>
+                <li><a href="auth.html" class="btn-login-mobile">Entrar / Registrarse</a></li>
+                <li><a href="index-en.html" class="lang-toggle-mobile">EN</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -38,8 +51,10 @@
                 <img src="./img/logo.png" alt="BARNA O'CLOCK Logo">
             </div>
             <p>¿Dónde es el lío hoy? Encuentra tu próxima fiesta.</p>
-            <input type="text" placeholder="Busca fiesta, DJ, club o barrio...">
-            <button>LET'S GO</button>
+            <div class="hero-search">
+                <input type="text" placeholder="Busca fiesta, DJ, club o barrio...">
+                <button><span class="btn-text">LET'S GO</span><span class="btn-icon">➜</span></button>
+            </div>
         </section>
 
         <section class="vibes">
@@ -88,7 +103,37 @@
     <footer>
         <p>&copy; 2026 BARNA O’CLOCK - Hecho en BCN</p>
     </footer>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenuMobile = document.getElementById('nav-menu-mobile');
 
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenuMobile.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = navMenuMobile.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenuMobile.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickOnMenu = navMenuMobile.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickOnMenu && !isClickOnHamburger && navMenuMobile.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenuMobile.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
